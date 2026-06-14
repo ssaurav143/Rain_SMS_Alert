@@ -7,6 +7,8 @@ import os
 api_key = os.getenv("OPENWEATHER_API_KEY")
 account_sid = os.getenv("TWILIO_ACCOUNT_SID")
 auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+from_number = os.getenv("FROM_NUMBER")
+to_number = os.getenv("TO_NUMBER")
 
 weather_parameters = {
     "lat": 60.128162,
@@ -33,7 +35,7 @@ if will_rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to rain, get an umbrella with you!",
-        from_="FROM_NUMBER",
-        to="TO_NUMBER",
+        from_=from_number,
+        to=to_number,
     )
     print(message.sid)
