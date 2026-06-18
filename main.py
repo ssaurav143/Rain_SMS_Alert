@@ -11,8 +11,8 @@ from_number = os.getenv("FROM_NUMBER")
 to_number = os.getenv("TO_NUMBER")
 
 weather_parameters = {
-    "lat": 60.128162,
-    "lon": 18.643501,
+    "lat": 20.968731,
+    "lon": 85.745392,
     "cnt": 4,
     "appid": api_key
 }
